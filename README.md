@@ -1,22 +1,54 @@
 # 🧮 Calculadora de Partidas Rankeadas
 
-Desafio do bootcamp da **DIO** para praticar variáveis, operadores, laços de repetição, estruturas de decisão e funções em JavaScript.
+## 📌 Objetivo
+Crie uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador.  
+Depois disso, calcule o saldo de Rankeadas (vitórias - derrotas) e determine o nível do jogador de acordo com as vitórias.
+
+### 🛠️ O que deve ser utilizado
+- Variáveis  
+- Operadores  
+- Laços de repetição  
+- Estruturas de decisão  
+- Funções  
 
 ---
 
-## 📌 Descrição
-Crie uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador.
-O saldo de Rankeadas é calculado por: **vitórias - derrotas**.
-
-### Classificação
-- Menos de 10 vitórias → Ferro
-- 11 a 20 → Bronze
-- 21 a 50 → Prata
-- 51 a 80 → Ouro
-- 81 a 90 → Diamante
-- 91 a 100 → Lendário
-- 101 ou mais → Imortal
+## 📊 Regras de Classificação
+- Se vitórias for **menor que 10** → Ferro  
+- Se vitórias for **entre 11 e 20** → Bronze  
+- Se vitórias for **entre 21 e 50** → Prata  
+- Se vitórias for **entre 51 e 80** → Ouro  
+- Se vitórias for **entre 81 e 90** → Diamante  
+- Se vitórias for **entre 91 e 100** → Lendário  
+- Se vitórias for **maior ou igual a 101** → Imortal  
 
 ---
 
-## 📤 Saída esperada
+## 📜 Código de Exemplo
+
+```javascript
+function calcularRanked(vitorias, derrotas) {
+  let saldoVitorias = vitorias - derrotas;
+  let nivel = "";
+
+  if (vitorias < 10) {
+    nivel = "Ferro";
+  } else if (vitorias >= 11 && vitorias <= 20) {
+    nivel = "Bronze";
+  } else if (vitorias >= 21 && vitorias <= 50) {
+    nivel = "Prata";
+  } else if (vitorias >= 51 && vitorias <= 80) {
+    nivel = "Ouro";
+  } else if (vitorias >= 81 && vitorias <= 90) {
+    nivel = "Diamante";
+  } else if (vitorias >= 91 && vitorias <= 100) {
+    nivel = "Lendário";
+  } else {
+    nivel = "Imortal";
+  }
+
+  return `O Herói tem de saldo de ${saldoVitorias} está no nível de ${nivel}`;
+}
+
+// Exemplo de uso:
+console.log(calcularRanked(85, 10));
