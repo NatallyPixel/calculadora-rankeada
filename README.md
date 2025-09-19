@@ -1,8 +1,8 @@
 # 🧮 Calculadora de Partidas Rankeadas
 
 ## 📌 Objetivo
-Crie uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador.  
-Depois disso, calcule o saldo de Rankeadas (vitórias - derrotas) e determine o nível do jogador de acordo com as vitórias.
+Criar uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador.  
+Com isso, calcular o saldo de vitórias e derrotas para determinar o nível do jogador de acordo com as vitórias.
 
 ### 🛠️ O que deve ser utilizado
 - Variáveis  
@@ -52,3 +52,4 @@ function calcularRanked(vitorias, derrotas) {
 
 // Exemplo de uso:
 console.log(calcularRanked(85, 10));
+
